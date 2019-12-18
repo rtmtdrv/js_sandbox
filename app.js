@@ -61,28 +61,94 @@ console.timeEnd('Hello');
 // name = 'Steve Smith';
 // console.log(name);
 
-// Const
-const name = 'John';
-console.log(name);
-// Can not reassign
-// name = 'Sara';
-// Have to assign value
-// const greeting;
+// // Const
+// const name = 'John';
+// console.log(name);
+// // Can not reassign
+// // name = 'Sara';
+// // Have to assign value
+// // const greeting;
 
-const person = {
-  name: 'John',
-  age: 30
+// const person = {
+//   name: 'John',
+//   age: 30
+// }
+
+// person.name = 'Sara';
+// person.age = 32;
+
+// // console.log(person);
+
+// const numbers = [1,2,3,4,5];
+// numbers.push(6);
+
+// console.log(numbers);
+
+// Primitives
+// String
+// Number (integers, decimals, floats)
+// Boolean (true, false)
+// Null
+// Undefined (not assigned)
+// Symbols
+
+// Reference Types
+// Arrays
+// Object Literals
+// Functions
+// Dates\
+
+// Primitive
+
+// String
+const name = 'Jon Doe'
+console.log(typeof name);
+
+// Number
+const age = 45;
+console.log(typeof age);
+
+// Boolean
+const hasKids = true;
+console.log(typeof hasKids);
+
+// Null
+const car = null;
+console.log(typeof car);
+
+// Undefined
+let test;
+console.log(typeof test);
+
+// Symbol
+const sym = Symbol();
+console.log(typeof sym);
+
+// REFERENCE TYPES - Objects
+// Array
+const hobbies = ['movies', 'music'];
+console.log(typeof hobbies);
+
+// Object Literal
+const address = {
+  city: 'Yorba Linda',
+  state: 'CA'
 }
+console.log(typeof address);
 
-person.name = 'Sara';
-person.age = 32;
+// Date
+const today = new Date();
+console.log(today);
+console.log(typeof today);
 
-// console.log(person);
 
-const numbers = [1,2,3,4,5];
-numbers.push(6);
 
-console.log(numbers);
+
+
+
+
+
+
 
 
 
