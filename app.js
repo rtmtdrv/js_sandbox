@@ -276,39 +276,41 @@ console.timeEnd('Hello');
 
 // console.log(val);
 
-// TEMPLATE LITERALS
+// // TEMPLATE LITERALS
 
-const name = 'John';
-const age = 31;
-const job = 'Web Developer';
-const city = 'Miami';
+// const name = 'John';
+// const age = 31;
+// const job = 'Web Developer';
+// const city = 'Miami';
 
-// Without template strings (es5)
-html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job:' + job + '</li><li>City: ' + city + '</li></ul>';
+// // Without template strings (es5)
+// html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job:' + job + '</li><li>City: ' + city + '</li></ul>';
 
-html = '<ul>' + 
-        '<li>Name: ' + name + '</li>' +
-        '<li>Age: ' + age + '</li>' +
-        '<li>Job: ' + job + '</li>' +
-        '<li>City: ' + city + '</li>' +
-        '</ul>'
+// html = '<ul>' + 
+//         '<li>Name: ' + name + '</li>' +
+//         '<li>Age: ' + age + '</li>' +
+//         '<li>Job: ' + job + '</li>' +
+//         '<li>City: ' + city + '</li>' +
+//         '</ul>'
 
-function hello() {
-  return 'Hello';
-}
+// function hello() {
+//   return 'Hello';
+// }
 
-// With Template strings (es6)
-html = `
-  <ul>
-    <li>Name: ${name}</li>
-    <li>Age: ${age}</li>
-    <li>Job: ${job}</li>
-    <li>City: ${city}</li>
-    <li>${2 + 2}</li>
-    <li>${hello()}</li>
-    <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
-    </ul>
-`;
+// // With Template strings (es6)
+// html = `
+//   <ul>
+//     <li>Name: ${name}</li>
+//     <li>Age: ${age}</li>
+//     <li>Job: ${job}</li>
+//     <li>City: ${city}</li>
+//     <li>${2 + 2}</li>
+//     <li>${hello()}</li>
+//     <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
+//     </ul>
+// `;
 
-document.body.innerHTML = html;
+// document.body.innerHTML = html;
+
+
 
