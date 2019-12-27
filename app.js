@@ -535,47 +535,94 @@ const id = 100;
 // else
 //   console.log('INCORRECT');
 
-// SWITCHES
-const color = 'yellow';
+// // SWITCHES
+// const color = 'yellow';
 
-switch(color) {
-  case 'red':
-    console.log('Color is red');
-    break;
-  case 'blue':
-    console.log('Color is blue');
-    break;
-  default:
-    console.log('Color is not red or blue');
-    break;
+// switch(color) {
+//   case 'red':
+//     console.log('Color is red');
+//     break;
+//   case 'blue':
+//     console.log('Color is blue');
+//     break;
+//   default:
+//     console.log('Color is not red or blue');
+//     break;
+// }
+
+// let day;
+
+// switch(new Date().getDay()) {
+//   case 0:
+//     day = "Sunday";
+//     break;
+//   case 1:
+//     day = "Monday";
+//     break;
+//   case 2:
+//     day = "Tuesday";
+//     break;
+//   case 3:
+//     day = "Wednesday";
+//     break;
+//   case 4:
+//     day = "Thursday";
+//     break;
+//   case 5:
+//     day = "Friday";
+//     break;
+//   case 6:
+//     day = "Saturday";
+//     break;
+// }
+
+// console.log(`Today is ${day}`);
+// console.log(new Date().getDay());
+
+// FUNCTION DECLARATIONS AND EXPRESSIONS
+
+function greet(firstName = 'John', lastName = 'Doe'){
+  // if(typeof firstName === 'undefined'){ firstName = 'John'}
+  // if(typeof lastName === 'undefined'){ lastName = 'Doe'}
+  // console.log('Hello');
+  return 'Hello ' + firstName + ' ' + lastName;
 }
 
-let day;
+// console.log(greet());
 
-switch(new Date().getDay()) {
-  case 0:
-    day = "Sunday";
-    break;
-  case 1:
-    day = "Monday";
-    break;
-  case 2:
-    day = "Tuesday";
-    break;
-  case 3:
-    day = "Wednesday";
-    break;
-  case 4:
-    day = "Thursday";
-    break;
-  case 5:
-    day = "Friday";
-    break;
-  case 6:
-    day = "Saturday";
-    break;
+// FUNCTION EXPRESSIONS
+
+const square = function(x = 3) {
+  return x*x;
+};
+
+// console.log(square());
+
+// IMMIDIATELY INVOKABLE FUNCTION XPRESSIONS - IIFEs
+
+// (function(){
+//   console.log('IIFE Ran..');
+// })();
+
+// (function(name){
+//   console.log('Hello ' + name);
+// })('Brad');
+
+// PROPERTY METHODS
+
+const todo = {
+  add: function(){
+    console.log('Add todo...');
+  },
+  edit: function(id){
+    console.log(`Edit todo ${id}`);
+  }
 }
 
-console.log(`Today is ${day}`);
-console.log(new Date().getDay());
+todo.delete = function(){
+  console.log('Delete todo');
+}
 
+todo.add();
+todo.edit(22);
+todo.delete();
