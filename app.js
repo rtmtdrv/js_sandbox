@@ -312,67 +312,105 @@ console.timeEnd('Hello');
 
 // document.body.innerHTML = html;
 
-// ARRAYS & ARRAY METHODS
+// // ARRAYS & ARRAY METHODS
 
-const numbers = [43, 56, 33, 23, 44, 36, 5];
-const numbers2 = new Array(22,45,33,76,54);
-const fruit = ['Apple', 'Banana', 'Orange', 'Pear'];
-const mixed = [22, 'Hello', true, undefined, null, {a:1, b:1}, new Date()];
+// const numbers = [43, 56, 33, 23, 44, 36, 5];
+// const numbers2 = new Array(22,45,33,76,54);
+// const fruit = ['Apple', 'Banana', 'Orange', 'Pear'];
+// const mixed = [22, 'Hello', true, undefined, null, {a:1, b:1}, new Date()];
 
-let val;
+// let val;
 
-// Get array length
-val = numbers.length;
-// Check if is array
-val = Array.isArray(numbers);
-// Get single value
-val = numbers[3];
-val = numbers[0];
-// Insert into array
-numbers[2] = 100;
-// Find index of value
-val = numbers.indexOf(36);
+// // Get array length
+// val = numbers.length;
+// // Check if is array
+// val = Array.isArray(numbers);
+// // Get single value
+// val = numbers[3];
+// val = numbers[0];
+// // Insert into array
+// numbers[2] = 100;
+// // Find index of value
+// val = numbers.indexOf(36);
 
-// MUTATING ARRAYS
-// // Add on to end
-// numbers.push(250);
-// // Add on to front
-// numbers.unshift(120);
-// // Take off from end
-// numbers.pop();
-// // Take off from front
-// numbers.shift();
-// // Splice values
-// numbers.splice(1,1);
-// // numbers.splice(1,3);
-// //Reverse Array
-// numbers.reverse();
+// // MUTATING ARRAYS
+// // // Add on to end
+// // numbers.push(250);
+// // // Add on to front
+// // numbers.unshift(120);
+// // // Take off from end
+// // numbers.pop();
+// // // Take off from front
+// // numbers.shift();
+// // // Splice values
+// // numbers.splice(1,1);
+// // // numbers.splice(1,3);
+// // //Reverse Array
+// // numbers.reverse();
 
-// Concatenate array
-val = numbers.concat(numbers2);
+// // Concatenate array
+// val = numbers.concat(numbers2);
 
-// Sort arrays
-val = fruit.sort();
-// val = numbers.sort();
+// // Sort arrays
+// val = fruit.sort();
+// // val = numbers.sort();
 
-// // Use the "compare function"
-// val = numbers.sort(function(x,y) {
-//   return x - y;
-// });
+// // // Use the "compare function"
+// // val = numbers.sort(function(x,y) {
+// //   return x - y;
+// // });
 
-// // Reverse sort
-// val = numbers.sort(function(x,y) {
-//   return y - x;
-// });
+// // // Reverse sort
+// // val = numbers.sort(function(x,y) {
+// //   return y - x;
+// // });
 
-// Find
-function over50(num) {
-  return num > 50;
+// // Find
+// function over50(num) {
+//   return num > 50;
+// }
+
+// val = numbers.find(over50);
+
+// console.log(numbers);
+// console.log(val);
+
+// OBJECT LITERALS
+
+const person = {
+  firstName: 'Steve',
+  lastName: 'Smith',
+  age: 36,
+  email: 'stevesmith@gmail.com',
+  hobbies: ['music', 'sports'],
+  address: {
+    city: 'Miami',
+    state: 'FL'
+  },
+  getBirthYear: function() {
+    return 2019 - this.age;
+  }
 }
 
-val = numbers.find(over50);
+let val;
+val = person;
+// Get specific value
+val = person.firstName;
+val = person['lastName'];
+val = person.age;
+val = person.age;
+val = person.address['city'];
+val = person.getBirthYear();
 
-console.log(numbers);
 console.log(val);
 
+const people = [
+  {name: 'John', age: 30},
+  {name: 'Mike', age: 23},
+  {name: 'Nancy', age: 40}
+];
 
+for(let i = 0; i < people.length; i++) {
+  console.log(people[i].name);
+  
+}
