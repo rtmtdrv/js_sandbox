@@ -724,42 +724,70 @@ const id = 100;
 //   console.log('NO');
 // }
 
-let val;
+// let val;
 
-// Outer height and width
-val = window.outerHeight;
-val = window.outerWidth;
+// // Outer height and width
+// val = window.outerHeight;
+// val = window.outerWidth;
 
-// Inner height and width
-val = window.innerHeight;
-val = window.innerWidth;
+// // Inner height and width
+// val = window.innerHeight;
+// val = window.innerWidth;
 
-// Scroll points
-val = window.scrollY;
-val = window.scrollX;
+// // Scroll points
+// val = window.scrollY;
+// val = window.scrollX;
 
-// Location Object
-val = window.location;
-val = window.location.hostname;
-val = window.location.port;
-val = window.location.href;
-val = window.location.search;
+// // Location Object
+// val = window.location;
+// val = window.location.hostname;
+// val = window.location.port;
+// val = window.location.href;
+// val = window.location.search;
 
-// Redirect
-// window.location.href = 'http://google.com';
-// Reload
-// window.location.reload();
+// // Redirect
+// // window.location.href = 'http://google.com';
+// // Reload
+// // window.location.reload();
 
-// History Object
+// // History Object
 
-// window.history.go(-1);
-// val = window.history.length;
+// // window.history.go(-1);
+// // val = window.history.length;
 
-// Navigator Object
-val = window.navigator;
-val = window.navigator.appVersion;
-val = window.navigator.userAgent;
-val = window.navigator.platform;
-val = window.navigator.language;
+// // Navigator Object
+// val = window.navigator;
+// val = window.navigator.appVersion;
+// val = window.navigator.userAgent;
+// val = window.navigator.platform;
+// val = window.navigator.language;
 
-console.log(val);
+// console.log(val);
+
+// GLOBAL SCOPE
+var a = 1;
+let b = 2;
+const c = 3;
+
+// function test() {
+//   var a = 4;
+//   let b = 5;
+//   const c = 6;
+//   console.log('Function Scope: ', a , b, c);
+// }
+
+// test();
+
+// if(true) {
+//   // Block Scope
+//   var a = 4;
+//   let b = 5;
+//   const c = 6;
+//   console.log('If Scope: ', a , b, c);
+// }
+
+for(let a = 0; a < 10; a++) {
+  console.log(`Loop: ${a}`);
+}
+
+console.log('Global Scope: ', a , b, c);
