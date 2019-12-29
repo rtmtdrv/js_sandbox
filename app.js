@@ -790,4 +790,4 @@ for(let a = 0; a < 10; a++) {
   console.log(`Loop: ${a}`);
 }
 
-console.log('Global Scope: ', a , b, c);
+console.log('Global Scope: ', a, b, c);
