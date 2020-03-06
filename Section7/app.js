@@ -1,58 +1,45 @@
-document.getElementById('button1').addEventListener('click', getText);
+// const sayHello = function() {
+//   console.log('Hello');
+// }
 
-document.getElementById('button2').addEventListener('click', getJson);
+// const sayHello = () => {
+//   console.log('Hello');
+// }
 
-document.getElementById('button3').addEventListener('click', getExternal);
+// One Line Function does not need braces
+// const sayHello = () => console.log('Hello');
 
-// Get Local Text File Data
-function getText() {
-  fetch('test.txt')
-    .then(function(res){
-      return res.text();
-    })
-    .then(function(data){
-      console.log(data);
-      document.getElementById('output').innerHTML = data;
-    })
-    .catch(function(err){
-      console.log(err);
-    });
-}
+// Returns 'Hello'
+// const sayHello = () => 'Hello';
 
-// Get Local JSON Data
-function getJson() {
-  fetch('post.json')
-    .then(function(res){
-      return res.json();
-    })
-    .then(function(data){
-      console.log(data);
-      let output = '';
-      data.forEach(function(post){
-        output += `<li>${post.title}</li>`;
-      });
-      document.getElementById('output').innerHTML = output;
-    })
-    .catch(function(err){
-      console.log(err);
-    });
-}
+// Same as above
+// const sayHello = function() {
+//   return "Hello";
+// }
 
-// Get from External API
-function getExternal() {
-  fetch('https://api.github.com/users')
-    .then(function(res){
-      return res.json();
-    })
-    .then(function(data){
-      console.log(data);
-      let output = '';
-      data.forEach(function(user){
-        output += `<li>${user.login}</li>`;
-      });
-      document.getElementById('output').innerHTML = output;
-    })
-    .catch(function(err){
-      console.log(err);
-    });
-}
+// Return object
+// const sayHello = () => ({msg: 'Hello'})
+
+// Single Param does not need parentheses
+// const sayHello = (name) => console.log(`Hello ${name}`);
+// const sayHello = name => console.log(`Hello ${name}`);
+
+// const sayHello = (firstName, lastName) => console.log(`Hello ${firstName} ${lastName}`);
+
+// sayHello('Art', 'Todorov');
+
+const users = ['Nathan', 'John', 'William'];
+
+// const nameLengths = users.map(function(name) {
+//   return name.length;
+// });
+
+//Shorter
+// const nameLengths = users.map((name) => {
+//   return name.length;
+// });
+
+// Shortest
+const nameLengths = users.map(name => name.length);
+
+console.log(nameLengths);
