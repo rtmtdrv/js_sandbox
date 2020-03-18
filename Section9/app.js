@@ -1,34 +1,31 @@
 let re;
+// Literal Characters
 re = /hello/;
-re = /hello/i; // i = case insensitive
-// re = /hello/g; // g = Global search
+re = /hello/i;
 
-// console.log(re);
-// console.log(re.source);
+// Metacharacter Symbols
+re = /^h/i;        // Must start with
+re = / world$/i;  // Must end with
+re = /^hello$/i;  // Must begin and end with
+re = /h.llo/i;  // Matches any ONE character
+re = /h*llo/i;  // Matches any character 0 or more
+re =  /gre?a?y/i   // Optional chracter
+re =  /gre?a?y\?/i   // Escape chracter
 
-// exec() - Return result in an array
-// const result = re.exec('hello world');
+// String to match
+const str = 'gray?';
 
-// console.log(result);
-// console.log(result[0]);
-// console.log(result.index);
-// console.log(result.input);
+// Log results
+const result = re.exec(str);
+console.log(result);
 
-// test() - Returns true or false
-// const result = re.test('Hello');
-// console.log(result);
 
-// match() - Return result array or null
-// const str = 'Hello There';
-// const result = str.match(re);
-// console.log(result);
+function reTest(re, str) {
+  if(re.test(str)) {
+    console.log(`${str} matches ${re.source}`);
+  } else {
+    console.log(`${str} does not match ${re.source}`);
+  }
+}
 
-// search() - Return index of the first match if not found returns -1
-// const str = 'Art Hello There';
-// const result = str.search(re);
-// console.log(result);
-
-// replace() - Return new string with some or all matches of a pattern
-const str = 'Hello There';
-const newStr = str.replace(re, 'Hi');
-console.log(newStr);
+reTest(re, str);
