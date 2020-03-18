@@ -1,33 +1,34 @@
-const user = {email: 'jdoe@gmail.com'};
+let re;
+re = /hello/;
+re = /hello/i; // i = case insensitive
+// re = /hello/g; // g = Global search
 
-try {
-  // Produce a ReferenceError
-  // myFunction();
+// console.log(re);
+// console.log(re.source);
 
-  // Produce a TypeError
-  // null.myFunction();
+// exec() - Return result in an array
+// const result = re.exec('hello world');
 
-  // Will produce SyntaxError
-  // console.log(eval('2+2'));
-  // eval('Hello World');
+// console.log(result);
+// console.log(result[0]);
+// console.log(result.index);
+// console.log(result.input);
 
-  // Will produce URIError
-  // decodeURIComponent('%');
+// test() - Returns true or false
+// const result = re.test('Hello');
+// console.log(result);
 
-  if(!user.name) {
-    // throw 'User has no name'
-    throw new SyntaxError('User has no name');
-  }
-  
-} catch(e) {
-  console.log(`User Error: ${e.message}`);
-  // console.log(e);
-  // console.log(`${e.name}: ITS NULL DUMMIE`);
-  // console.log(e.message);
-  // console.log(e.name);
-  // console.log(e instanceof TypeError);
-} finally {
-  console.log('Finally runs regardless of result...');
-}
+// match() - Return result array or null
+// const str = 'Hello There';
+// const result = str.match(re);
+// console.log(result);
 
-console.log('Program continues...');
+// search() - Return index of the first match if not found returns -1
+// const str = 'Art Hello There';
+// const result = str.search(re);
+// console.log(result);
+
+// replace() - Return new string with some or all matches of a pattern
+const str = 'Hello There';
+const newStr = str.replace(re, 'Hi');
+console.log(newStr);
