@@ -42,7 +42,6 @@ document.querySelector('.unsub-s').addEventListener('click', function() {
   click.unsubscribe(getCurrSeconds);
 });
 
-
 document.querySelector('.fire').addEventListener('click', function() {
   click.fire();
 });
